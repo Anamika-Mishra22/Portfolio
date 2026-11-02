@@ -29,26 +29,26 @@ export default function Hero() {
   return (
     <MotionConfig reducedMotion="user">
       <section id="home" className="px-3 pt-4 sm:px-6 sm:pt-8">
-        <div className="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0b0710] px-6 py-14 text-white sm:px-10 sm:py-20 lg:px-14">
+        <div className="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b0710] px-5 py-10 text-white sm:rounded-[2.5rem] sm:px-10 sm:py-20 lg:px-14">
           {/* Background glows */}
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
             <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-orange-500/15 blur-[120px]" />
             <div className="absolute right-0 top-10 h-96 w-96 rounded-full bg-purple-600/30 blur-[130px]" />
           </div>
 
-          <div className="grid items-center gap-14 lg:grid-cols-2">
+          <div className="grid grid-cols-1 items-center gap-10 sm:gap-14 lg:grid-cols-2">
             {/* Left: intro */}
             <motion.div
               variants={container}
               initial="hidden"
               animate="show"
-              className="flex flex-col items-start gap-6"
+              className="flex min-w-0 flex-col items-start gap-5 sm:gap-6"
             >
               <motion.span
                 variants={item}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold backdrop-blur sm:text-sm"
+                className="inline-flex max-w-full items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-left text-xs font-semibold backdrop-blur sm:rounded-full sm:text-sm"
               >
-                <i className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
+                <i className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-green-400" />
                 Open to new opportunities and freelance
               </motion.span>
 
@@ -62,13 +62,13 @@ export default function Hero() {
               <h1 className="font-extrabold leading-[0.95] tracking-tight">
                 <motion.span
                   variants={item}
-                  className="block bg-linear-to-r from-purple-300 via-fuchsia-300 to-fuchsia-400 bg-clip-text text-5xl text-transparent sm:text-7xl lg:text-8xl"
+                  className="block bg-linear-to-r from-purple-300 via-fuchsia-300 to-fuchsia-400 bg-clip-text text-[2.75rem] text-transparent sm:text-7xl lg:text-8xl"
                 >
                   Software
                 </motion.span>
                 <motion.span
                   variants={item}
-                  className="mt-2 block text-5xl sm:text-7xl lg:text-8xl"
+                  className="mt-2 block text-[2.75rem] sm:text-7xl lg:text-8xl"
                 >
                   Developer
                 </motion.span>
@@ -83,10 +83,13 @@ export default function Hero() {
                 interactions and maintainable code.
               </motion.p>
 
-              <motion.div variants={item} className="flex flex-wrap gap-4">
+              <motion.div
+                variants={item}
+                className="flex w-full flex-wrap gap-3 sm:w-auto sm:gap-4"
+              >
                 <a
                   href="#projects"
-                  className="group inline-flex items-center gap-2 rounded-full bg-linear-to-r from-purple-500 to-orange-400 px-7 py-3.5 text-sm font-bold text-[#12041c] shadow-lg shadow-purple-500/25 transition-transform hover:scale-105 sm:text-base"
+                  className="group inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-linear-to-r from-purple-500 to-orange-400 px-7 py-3.5 text-center text-sm font-bold text-[#12041c] shadow-lg shadow-purple-500/25 transition-transform hover:scale-105 sm:flex-none sm:text-base"
                 >
                   View My Work
                   <svg
@@ -104,7 +107,7 @@ export default function Hero() {
                 </a>
                 <a
                   href="#contact"
-                  className="rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-semibold backdrop-blur transition-colors hover:bg-white/25 sm:text-base"
+                  className="flex-1 rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-center text-sm font-semibold backdrop-blur transition-colors hover:bg-white/25 sm:flex-none sm:text-base"
                 >
                   Contact Me
                 </a>
@@ -116,7 +119,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", bounce: 0.25, duration: 1, delay: 0.4 }}
-              className="mx-auto w-full max-w-lg"
+              className="mx-auto w-full min-w-0 max-w-lg"
             >
               <div className="overflow-hidden rounded-2xl border border-white/15 bg-[#180e26]/85 shadow-2xl shadow-purple-500/25 backdrop-blur">
                 <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
@@ -133,7 +136,7 @@ export default function Hero() {
                   initial="hidden"
                   animate="show"
                   transition={{ delayChildren: 0.9 }}
-                  className="overflow-x-auto p-5 font-mono text-[13px] leading-7 text-white/90 sm:p-6 sm:text-sm"
+                  className="whitespace-pre-wrap break-words p-5 font-mono text-[13px] leading-7 text-white/90 sm:p-6 sm:text-sm"
                 >
                   <motion.code variants={line} className="block">
                     <span className={kw}>const</span> anamika = {"{"}
@@ -170,17 +173,17 @@ export default function Hero() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 pt-8"
+            className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:mt-14 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:pt-8"
           >
             <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
               Technologies I work with
             </p>
-            <ul className="flex flex-wrap gap-2.5">
+            <ul className="flex flex-wrap gap-2">
               {stack.map((tech) => (
                 <motion.li
                   key={tech.name}
                   variants={item}
-                  className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white/80 backdrop-blur sm:text-sm"
+                  className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs font-semibold text-white/80 backdrop-blur sm:px-3 sm:text-sm"
                 >
                   <span
                     className={`grid h-5 w-5 place-items-center rounded-md bg-linear-to-br text-[9px] font-extrabold text-white ${tech.color}`}
