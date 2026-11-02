@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Hanken_Grotesk, Caveat } from "next/font/google";
+import {
+  Instrument_Serif,
+  Hanken_Grotesk,
+  Caveat,
+  Space_Grotesk,
+} from "next/font/google";
 import "./globals.css";
 
 const instrument = Instrument_Serif({
@@ -20,6 +25,12 @@ const caveat = Caveat({
   variable: "--font-caveat",
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-main",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Anamika Mishra | Software Developer",
   description:
@@ -32,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrument.variable} ${hanken.variable} ${caveat.variable}`}
+      className={`${instrument.variable} ${hanken.variable} ${caveat.variable} ${spaceGrotesk.variable}`}
     >
       <body>{children}</body>
     </html>

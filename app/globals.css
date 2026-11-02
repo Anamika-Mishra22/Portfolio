@@ -11,7 +11,7 @@
   --mid: #e879f9;
   --glass: rgba(255, 255, 255, 0.06);
   --edge: rgba(255, 255, 255, 0.14);
-    --glow-a: rgba(124, 58, 237, 0.28);
+  --glow-a: rgba(124, 58, 237, 0.28);
   --glow-b: rgba(217, 70, 239, 0.2);
   --glow-c: rgba(251, 146, 60, 0.16);
 }
@@ -26,9 +26,9 @@
   --color-mid: var(--mid);
   --color-glass: var(--glass);
   --color-edge: var(--edge);
-  --font-display: var(--font-manrope);
-  --font-sans: var(--font-manrope);
-  --font-hand: var(--font-manrope);
+  --font-display: var(--font-main);
+  --font-sans: var(--font-main);
+  --font-hand: var(--font-main);
 }
 
 html {
@@ -37,9 +37,9 @@ html {
 
 body {
   color: var(--ink);
-  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-main), system-ui, sans-serif;
   background-color: var(--bg);
-   background-image:
+  background-image:
     radial-gradient(60rem 40rem at 10% -10%, var(--glow-a), transparent 60%),
     radial-gradient(50rem 40rem at 100% 35%, var(--glow-b), transparent 60%),
     radial-gradient(50rem 40rem at 15% 100%, var(--glow-c), transparent 60%);
@@ -73,6 +73,7 @@ body {
     letter-spacing: -0.02em;
   }
 }
+
 :root[data-palette="ocean"] {
   --accent: #60a5fa;
   --mid: #22d3ee;

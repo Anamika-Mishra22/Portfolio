@@ -32,7 +32,7 @@ export default function Hero() {
         id="home"
         className="w-full max-w-full overflow-x-hidden px-3 pt-4 sm:px-6 sm:pt-8"
       >
-        <div className="relative isolate mx-auto w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b0710] px-4 py-10 text-white sm:rounded-[2.5rem] sm:px-10 sm:py-20 lg:px-14">
+        <div className="relative isolate mx-auto w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0b0710] px-4 pb-10 pt-16 text-white sm:rounded-[2.5rem] sm:px-10 sm:py-20 lg:px-14">
           {/* Background glows */}
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
             <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-orange-500/15 blur-[120px]" />
@@ -95,8 +95,7 @@ export default function Hero() {
               >
                 <a
                   href="#projects"
-                  className="group inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-linear-to-r from-purple-500 to-orange-400 px-6 py-3.5 text-center text-sm font-bold text-[#12041c] shadow-lg shadow-purple-500/25 transition-transform hover:scale-105 sm:flex-none sm:px-7 sm:text-base"
-                >
+                  className="group inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-linear-to-r from-purple-500 to-orange-400 px-4 py-3.5 text-center text-sm font-bold text-[#12041c] shadow-lg shadow-purple-500/25 transition-transform hover:scale-105 sm:flex-none sm:px-7 sm:text-base">
                   View My Work
                   <svg
                     viewBox="0 0 24 24"
@@ -112,11 +111,11 @@ export default function Hero() {
                   </svg>
                 </a>
                 <a
-                  href="#contact"
-                  className="flex-1 rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-center text-sm font-semibold backdrop-blur transition-colors hover:bg-white/25 sm:flex-none sm:px-7 sm:text-base"
-                >
-                  Contact Me
-                </a>
+  href="#contact"
+  className="flex-1 whitespace-nowrap rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-center text-sm font-semibold backdrop-blur transition-colors hover:bg-white/25 sm:flex-none sm:px-7 sm:text-base"
+>
+  Contact Me
+</a>
               </motion.div>
             </motion.div>
 
